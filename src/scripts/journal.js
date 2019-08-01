@@ -17,6 +17,18 @@ let journalEntries = [
         contents: "We learned about group projects",
         mood: "happy"
     },
+    {
+        date: "07/19/2019",
+        concept: "Fetch, API",
+        contents: "We learned about fetch and APIs",
+        mood: "happy"
+    },
+    {
+        date: "07/31/2019",
+        concept: "Factory Functions",
+        contents: "We learned about factory functions",
+        mood: "happy"
+    },
 ]
 
 //* create a reference of where to put the data
