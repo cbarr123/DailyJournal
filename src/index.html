@@ -13,24 +13,23 @@
         <fieldset>
             <label for="journalDate">Date of Entry</label>
             <input type="date" name="journalDate" id="journalDate">
-            Concepts Covered<input name = "ConceptsCovered" input type = "text">
+            Concepts Covered<input name = "journalConcept" input type = "text" id="journalConcept">
             Journal Entry
-            <textarea wrap="soft">
+            <textarea wrap="soft" name="journalEntry" id="journalEntry">
             </textarea>
             
             <!-- <input name = "JournalEntry" input type = "text"> -->
-            Mood<select name="mood">
+            Mood<select name="mood" name="journalMood" id="journalMood">
                 <option value="sad">Sad</option>
                 <option value="fine">Fine</option>
-                <option value="happy" selected>Happy</option>
+                <option value="happy">Happy</option>
             </select>
-            <input type="submit" value="Record Journal Entry">
+            <input id="journalSubmit" type="submit" value="Record Journal Entry">
         </fieldset>
     </form>
     <article id="journalContainer"></article>
     <script src="./scripts/data.js"></script> 
     <script src="./scripts/journal.js"></script>
-
     <script src="./scripts/entriesDOM.js"></script>
     <script src="./scripts/entryComponent.js"></script>
     
