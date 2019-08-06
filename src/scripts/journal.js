@@ -1,7 +1,17 @@
 //* fetch the data from the json object
-fetch("http://localhost:3000/entries")
-  .then(entries => entries.json())
-  .then(journalEntries => {
+
+/*
+    Main application logic that uses the functions and objects
+    defined in the other JavaScript files.
+
+    Change the fake variable names below to what they should be
+    to get the data and display it.
+*/
+// fetch("http://localhost:3000/entries")
+//   .then(entries => entries.json())
+// objectWithGetterMethod.methodToGetData().then(functionThatRendersData)
+
+getJournalEntries().then(journalEntries => {
     console.table(journalEntries);
     journalEntries.forEach(journalEntry => {
         const htmlRepresentation = createJournalEntryComponent(
