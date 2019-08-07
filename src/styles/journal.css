@@ -7,3 +7,11 @@ fieldset {
     flex-direction: column;
     background-color: goldenrod;
 }
+#radioBtn-container {
+    background-color: lightblue;
+
+}
+#journalContainer {
+    display: flex;
+    flex-direction: column;
+}

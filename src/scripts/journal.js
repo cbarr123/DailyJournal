@@ -29,11 +29,19 @@ document.querySelector("#journalSubmit").addEventListener("click", event => {
     content: content.value,
     mood: mood.value, 
   }
-  
-  // todo Display the new journal entry in the DOM
+  //* Display the new journal entry in the DOM
   saveJournalEntry(newJournalEntry)
   .then (() => {
     entries.push({date, concept, content, mood})
   })
-// todo render entries to DOM
-})
+  // todo render entries to DOM
+});
+//------------------radio button section---------
+const radioButtons = document.getElementsByName("radioButton")
+
+radioButtons.forEach(button => {
+  button.addEventListener("click", event => {
+    const mood = event.target.id
+    console.log(mood)
+  })
+});

@@ -14,8 +14,7 @@
             <label for="journalDate">Date of Entry</label>
             <input type="date" name="journalDate" id="journalDate">
             Concepts Covered<input name = "journalConcept" input type = "text" id="journalConcept">
-            Journal Entry
-            <textarea wrap="soft" name="journalEntry" id="journalEntry">
+            Journal Entry<textarea wrap="soft" name="journalEntry" id="journalEntry">
             </textarea>
             
             <!-- <input name = "JournalEntry" input type = "text"> -->
@@ -26,6 +25,19 @@
             </select>
             <input id="journalSubmit" type="submit" value="Record Journal Entry">
         </fieldset>
+    </form>
+    <form id=radioBtn-container>
+        <p>Please select the mood you wish to select:</p>
+        <div>
+            <input type="radio" id = "sad" name = "radioButton">
+            <label for = "sadButton">Sad</label>
+
+            <input type="radio" id = "fine"  name = "radioButton">
+            <label for = "fineButton">FIne</label>
+
+            <input type="radio" id = "happy"  name = "radioButton">
+            <label for = "happyButton">Happy</label>
+        </div>
     </form>
     <article id="journalContainer"></article>
     <script src="./scripts/data.js"></script> 
