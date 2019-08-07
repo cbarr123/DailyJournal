@@ -42,6 +42,31 @@ const radioButtons = document.getElementsByName("radioButton")
 radioButtons.forEach(button => {
   button.addEventListener("click", event => {
     const mood = event.target.id
-    console.log(mood)
+    document.querySelector("#journalContainer").innerHTML = ""
+    getJournalEntries().then(journalEntries => {
+      journalEntries.filter(entry => {
+        if (entry.mood === mood) {
+          const htmlRepresentation = createJournalEntryComponent(
+            entry.date,
+            entry.concept,
+            entry.content,
+            entry.mood
+          );
+          whereToDisplayTheJournalEntriesInTheDOM.innerHTML += htmlRepresentation;
+        }
+      });
+
+
+
+
+    }
+      
+      
+      
+      
+      
+      )
   })
 });
+
+// todo  take the content of mood, fetch on mood = objects that have the same mood

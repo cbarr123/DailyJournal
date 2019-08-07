@@ -5,7 +5,7 @@
       "date": "07/08/2019",
       "concept": "Semantic Tags",
       "content": "We discussed semantic tags and their purpose",
-      "mood": "happy"
+      "mood": "sad"
     },
     {
       "id": 2,
@@ -19,14 +19,14 @@
       "date": "07/10/2019",
       "concept": "Group Projects",
       "content": "We learned about group projects",
-      "mood": "happy"
+      "mood": "sad"
     },
     {
       "id": 4,
       "date": "07/19/2019",
       "concept": "Fetch, API",
       "content": "We learned about fetch and APIs",
-      "mood": "happy"
+      "mood": "fine"
     },
     {
       "id": 5,
@@ -39,7 +39,7 @@
       "date": "08/07/2019",
       "concept": "JSON",
       "content": "Worked on getting the JE to push to entries.json and the dom            ",
-      "mood": "happy",
+      "mood": "fine",
       "id": 6
     },
     {
