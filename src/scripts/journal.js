@@ -8,32 +8,32 @@
         const htmlRepresentation = createJournalEntryComponent(
           journalEntry.date,
           journalEntry.concept,
-          journalEntry.contents,
+          journalEntry.content,
           journalEntry.mood
         );
         whereToDisplayTheJournalEntriesInTheDOM.innerHTML += htmlRepresentation;
       });
   });
-
-  document.querySelector("#journalSubmit").addEventListener("click", event => {
-    // todo Capture the new journal entry and save them to an array
-    const date = document.querySelector("#journalDate");
-    const concept = document.querySelector("#journalConcept");
-    const content = document.querySelector("#journalEntry");
-    const mood = document.querySelector("#journalMood");
-    
-    const newJournalEntry = {
-      date: date.value,
-      concept: concept.value,
-      content: content.value,
-      mood: mood.value, 
-    }
-    // console.log(newJournalEntry)
+//* event listener on submit button, capturing submitted data in a const
+let newJournalEntry = ""
+document.querySelector("#journalSubmit").addEventListener("click", event => {
+  //* Capture the new journal entry with a factory function and save them to an array
+  const date = document.querySelector("#journalDate");
+  const concept = document.querySelector("#journalConcept");
+  const content = document.querySelector("#journalEntry");
+  const mood = document.querySelector("#journalMood");
+  
+  newJournalEntry = {
+    date: date.value,
+    concept: concept.value,
+    content: content.value,
+    mood: mood.value, 
+  }
+  
+  // todo Display the new journal entry in the DOM
+  saveJournalEntry(newJournalEntry)
+  .then (() => {
+    entries.push({date, concept, content, mood})
   })
-// todo this is what is next
-// todo POST the journal entry into entries.json
-
-
-// todo Display the new journal entry in the DOM
-
-
+// todo render entries to DOM
+})

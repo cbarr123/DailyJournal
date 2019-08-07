@@ -7,4 +7,19 @@ const getJournalEntries = search => {
 
 
 
+//* POST the journal entry into entries.json
+const saveJournalEntry = 
+  function(newJournalEntry) {
+    return fetch("http://localhost:3000/entries",{
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(newJournalEntry)
+    })
+    
+  }
+
+
+
 
