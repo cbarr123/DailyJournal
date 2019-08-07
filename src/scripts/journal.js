@@ -36,9 +36,8 @@ document.querySelector("#journalSubmit").addEventListener("click", event => {
   })
   // todo render entries to DOM
 });
-//------------------radio button section---------
+//------------------radio button section-------------------------------
 const radioButtons = document.getElementsByName("radioButton")
-
 radioButtons.forEach(button => {
   button.addEventListener("click", event => {
     const mood = event.target.id
@@ -55,18 +54,7 @@ radioButtons.forEach(button => {
           whereToDisplayTheJournalEntriesInTheDOM.innerHTML += htmlRepresentation;
         }
       });
-
-
-
-
-    }
-      
-      
-      
-      
-      
-      )
+    })
   })
 });
-
-// todo  take the content of mood, fetch on mood = objects that have the same mood
+// ---------------------end Radio Button---------------------------------
