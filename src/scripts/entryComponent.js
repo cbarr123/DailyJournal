@@ -7,6 +7,7 @@
               <section>Concepts Covered: ${concept}</section>
               <section>${content}</section>
               <section>${mood}</section>
+              <input id="journalDelete" type="delete" value="Delete Journal Entry">
           </div>`;
   };
 

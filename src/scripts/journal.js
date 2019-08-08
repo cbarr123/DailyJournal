@@ -55,6 +55,12 @@ radioButtons.forEach(button => {
         }
       });
     })
-  })
+  });
 });
 // ---------------------end Radio Button---------------------------------
+
+document.querySelector("#journalDelete").addEventListener("click", event => {
+  console.log("hi")
+
+
+})
