@@ -1,3 +1,4 @@
+//* This line populates the DOM with existing journal entries
 getJournalEntries().then(renderToDOM)
 
 //* event listener on submit button, capturing submitted data in a const
@@ -27,16 +28,15 @@ const radioButtons = document.getElementsByName("radioButton")
 radioButtons.forEach(button => {
   button.addEventListener("click", event => {
     const mood = event.target.id
+    // console.log('mood: ', mood);
+    
     document.querySelector("#journalContainer").innerHTML = ""
     getJournalEntries().then(journalEntries => {
-      journalEntries.filter(entry => {
-        if (entry.mood === mood) {
-          const htmlRepresentation = createJournalEntryComponent(
-            entry.date,
-            entry.concept,
-            entry.content,
-            entry.mood
-          );
+      // console.log(journalEntries)
+      journalEntries.filter(object => {
+        if (object.mood === mood) {
+          const htmlRepresentation = createJournalEntryComponent(object);
+          // console.log(htmlRepresentation)
           whereToDisplayTheJournalEntriesInTheDOM.innerHTML += htmlRepresentation;
         }
       });
@@ -57,8 +57,8 @@ deleteButton.addEventListener("click", event => {
     deleteEntry(JournalEntryToDelete)
 
     .then(getJournalEntries()).then(renderToDOM)
-    console.log("after delete")
-    console.log("after the empty string")
+    
+    
     
     
     }
