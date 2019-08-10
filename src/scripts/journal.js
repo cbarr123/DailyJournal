@@ -53,10 +53,10 @@ deleteButton.addEventListener("click", event => {
   if (event.target.id.startsWith("journalDelete--")){
     const JournalEntryToDelete = event.target.id.split("--")[1];
     console.log('JournalEntryToDelete: ', JournalEntryToDelete);
-    deleteEntry(JournalEntryToDelete)
     document.querySelector("#journalContainer").innerHTML = ""
+    deleteEntry(JournalEntryToDelete)
 
-    getJournalEntries().then(renderToDOM)
+    .then(getJournalEntries()).then(renderToDOM)
     console.log("after delete")
     console.log("after the empty string")
     
