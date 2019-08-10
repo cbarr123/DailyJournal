@@ -1,19 +1,5 @@
+getJournalEntries().then(renderToDOM)
 
-
-  //* invoke the function
-  //* inject the HTML into the DOM
-  getJournalEntries().then(journalEntries => {
-    // console.table(journalEntries);
-    journalEntries.forEach(journalEntry => {
-        const htmlRepresentation = createJournalEntryComponent(
-          journalEntry.date,
-          journalEntry.concept,
-          journalEntry.content,
-          journalEntry.mood
-        );
-        whereToDisplayTheJournalEntriesInTheDOM.innerHTML += htmlRepresentation;
-      });
-  });
 //* event listener on submit button, capturing submitted data in a const
 let newJournalEntry = ""
 document.querySelector("#journalSubmit").addEventListener("click", event => {
@@ -34,7 +20,7 @@ document.querySelector("#journalSubmit").addEventListener("click", event => {
   .then (() => {
     entries.push({date, concept, content, mood})
   })
-  // todo render entries to DOM
+  
 });
 //------------------radio button section-------------------------------
 const radioButtons = document.getElementsByName("radioButton")
@@ -58,9 +44,26 @@ radioButtons.forEach(button => {
   });
 });
 // ---------------------end Radio Button---------------------------------
-
-document.querySelector("#journalDelete").addEventListener("click", event => {
-  console.log("hi")
+// ---------------------begin Delete-------------------------------------
 
 
+const deleteButton = document.querySelector("#journalContainer")
+ 
+deleteButton.addEventListener("click", event => {
+  if (event.target.id.startsWith("journalDelete--")){
+    const JournalEntryToDelete = event.target.id.split("--")[1];
+    console.log('JournalEntryToDelete: ', JournalEntryToDelete);
+    deleteEntry(JournalEntryToDelete)
+    document.querySelector("#journalContainer").innerHTML = ""
+
+    getJournalEntries().then(renderToDOM)
+    console.log("after delete")
+    console.log("after the empty string")
+    
+    
+    }
 })
+
+
+
+

@@ -3,9 +3,7 @@
 const getJournalEntries = search => {
         return fetch("http://localhost:3000/entries")
             .then(response => response.json())
-    }
-
-
+}
 
 //* POST the journal entry into entries.json
 const saveJournalEntry = 
@@ -19,7 +17,10 @@ const saveJournalEntry =
     })
     
   }
-
-
-
-
+//* DELETE section
+const deleteEntry = (id) => {
+  return fetch(`http://localhost:3000/entries/${id}`,{
+  method: "DELETE",
+  })
+  .then(response => response.json())
+}

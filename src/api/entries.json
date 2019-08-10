@@ -1,60 +1,18 @@
 {
   "entries": [
     {
-      "id": 1,
-      "date": "07/08/2019",
-      "concept": "Semantic Tags",
-      "content": "We discussed semantic tags and their purpose",
-      "mood": "sad"
-    },
-    {
-      "id": 2,
-      "date": "07/09/2019",
-      "concept": "Flex Box",
-      "content": "We learned more about Flexbox",
-      "mood": "happy"
-    },
-    {
-      "id": 3,
-      "date": "07/10/2019",
-      "concept": "Group Projects",
-      "content": "We learned about group projects",
-      "mood": "sad"
-    },
-    {
-      "id": 4,
-      "date": "07/19/2019",
-      "concept": "Fetch, API",
-      "content": "We learned about fetch and APIs",
-      "mood": "fine"
-    },
-    {
-      "id": 5,
-      "date": "07/31/2019",
-      "concept": "Factory Functions",
-      "content": "We learned about factory functions",
-      "mood": "happy"
-    },
-    {
-      "date": "08/07/2019",
-      "concept": "JSON",
-      "content": "Worked on getting the JE to push to entries.json and the dom            ",
-      "mood": "fine",
-      "id": 6
+      "date": "2019-08-08",
+      "concept": "testing",
+      "content": "testing12345            ",
+      "mood": "sad",
+      "id": 21
     },
     {
       "date": "2019-08-07",
-      "concept": "Editing - Updating",
-      "content": "We reviewed editing and updating the json array",
-      "mood": "happy",
-      "id": 7
-    },
-    {
-      "date": "",
-      "concept": "",
-      "content": "            ",
+      "concept": "asddas",
+      "content": "            addasdd",
       "mood": "sad",
-      "id": 8
+      "id": 22
     }
   ]
 }
