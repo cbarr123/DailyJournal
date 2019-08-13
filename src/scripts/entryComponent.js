@@ -8,16 +8,11 @@ const createJournalEntryComponent = (object) => {
             <section>${object.content}</section>
             <section>${object.mood}</section>
             <button id="journalDelete--${object.id}">Delete Journal Entry</button>
+            <button id="journalEdit--${object.id}">Edit Journal Entry</button>
         </div>`;     
 };
 
-const renderToDOM = (journalEntries) => {
-  journalEntries.forEach(object => {
-    // console.table(object)
-    const htmlRepresentation = createJournalEntryComponent(object);
-    whereToDisplayTheJournalEntriesInTheDOM.innerHTML += htmlRepresentation;
-    }); 
-};
+
 
 
 

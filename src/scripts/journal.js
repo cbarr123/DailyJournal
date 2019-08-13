@@ -45,25 +45,54 @@ radioButtons.forEach(button => {
 });
 // ---------------------end Radio Button---------------------------------
 // ---------------------begin Delete-------------------------------------
-
-
 const deleteButton = document.querySelector("#journalContainer")
  
 deleteButton.addEventListener("click", event => {
   if (event.target.id.startsWith("journalDelete--")){
     const JournalEntryToDelete = event.target.id.split("--")[1];
     console.log('JournalEntryToDelete: ', JournalEntryToDelete);
+    
+    //* to clear the DOM
     document.querySelector("#journalContainer").innerHTML = ""
+    //* to delete the entry
     deleteEntry(JournalEntryToDelete)
-
-    .then(getJournalEntries()).then(renderToDOM)
     
-    
-    
-    
+    getJournalEntries().then(renderToDOM)
     }
 })
 
+
+
+
+
+
+// ----------------------begin Edit---------------------------------
+const editButton = document.querySelector("#journalContainer")
+
+
+editButton.addEventListener("click", event => {
+  if (event.target.id.startsWith("journalEdit--")){
+    const JournalEntryToEdit = event.target.id.split("--")[1];
+    console.log('JournalEntryToEdit: ', JournalEntryToEdit);
+    
+    retrieveEntry(JournalEntryToEdit)
+    .then(journalEntry => {
+      
+    })
+    const updateJournalFields = (JournalEntryToEdit) => {
+      const date = document.querySelector("#journalDate");
+      const concept = document.querySelector("#journalConcept");
+      const content = document.querySelector("#journalEntry");
+      const mood = document.querySelector("#journalMood");
+      
+      // * fetch the journal entry record corresponding to ID
+
+    }
+    
+  }
+
+
+})
 
 
 

@@ -22,5 +22,13 @@ const deleteEntry = (id) => {
   return fetch(`http://localhost:3000/entries/${id}`,{
   method: "DELETE",
   })
-  // .then(response => response.json())
+  .then(response => response.json())
 }
+
+//* Retrieve the specific entry for editing section
+const retrieveEntry = (id) => {
+  return fetch(`http://localhost:3000/entries/${id}`)
+  .then(response => response.json())
+}
+
+
