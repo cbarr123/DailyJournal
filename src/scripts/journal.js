@@ -77,7 +77,7 @@ editButton.addEventListener("click", event => {
     
     retrieveEntry(JournalEntryToEdit)
     .then(journalEntry => {
-      
+      console.log(journalEntry)
     })
     const updateJournalFields = (JournalEntryToEdit) => {
       const date = document.querySelector("#journalDate");
